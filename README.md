@@ -5,12 +5,13 @@ Página única em `dist/`, sem build e sem chamadas externas.
 
 ## Colocar no ar (Amazon Linux 2023)
 
-Na instância nova (portas 22 e 80 abertas), com o `setup-parabens.sh`:
+Na instância nova (portas 22 e 80 abertas), um comando só:
 
 ```bash
-sudo bash setup-parabens.sh
+curl -fsSL https://raw.githubusercontent.com/pablinrlq/pratica-site-instancia/main/setup-parabens.sh | sudo bash
 ```
 
+Ou baixe o `setup-parabens.sh` e rode `sudo bash setup-parabens.sh`.
 Ele instala tudo (Nginx, atualizações automáticas, usuário e serviço do app) e publica este repositório.
 Para atualizar depois: `sudo appctl deploy`.
 
